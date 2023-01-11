@@ -8,7 +8,7 @@ const message = document.querySelector('.feedback-form textarea');
 form.addEventListener('input', throttle(onFormData, 500));
 form.addEventListener('submit', onSubmitForm);
 
-const formData = {};
+const formData = state || {};
 
 function onFormData(e) {
   formData[e.target.name] = e.target.value;
