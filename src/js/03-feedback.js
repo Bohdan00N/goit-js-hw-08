@@ -20,7 +20,6 @@ function onSubmitForm(e) {
   e.preventDefault();
   if (e.target.email.value === '' || e.target.message.value === '') {
     alert('Заповніть поле');
-    e.target.message.value.reset()
     return;
   }
 
@@ -30,7 +29,8 @@ function onSubmitForm(e) {
 
 (function dataFromLocalStorage() {
   if (state) {
-    email.value = state.email || "";
-    message.value = state.message || "";
+    email.value = state.email || '';
+    message.value = state.message || '';
   }
 })();
+
