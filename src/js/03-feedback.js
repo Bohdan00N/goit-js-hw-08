@@ -22,9 +22,10 @@ function onSubmitForm(e) {
     alert('Заповніть поле');
     return;
   }
-
   e.currentTarget.reset();
   localStorage.removeItem('feedback-form-state');
+  formData.email = '';
+  formData.message = '';
 }
 
 (function dataFromLocalStorage() {
@@ -33,4 +34,3 @@ function onSubmitForm(e) {
     message.value = state.message || '';
   }
 })();
-
